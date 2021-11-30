@@ -4,11 +4,11 @@
 
 - When the microcontroller is powered up, the actual time is not known. 
 - The user has to set the time manually using the buttons.
-- At this stage, the display shows an uninitialized clock using the format HH:MM. The second display line may show a request for the user to set time. 
+- At this stage, the display shows an uninitialized clock using the format **HH:MM**. The second display line may show a request for the user to set time. 
 - First, the hour has to be set by repeatedly pressing the Rotary Button. After pressing the Joystick Button, the minutes have to be set via the Rotary Button. 
 - Pressing the Joystick Button again updates the system time and starts the clock. 
-- In this normal operation mode the time is shown in the format HH:MM:SS. In this state, the user can press the Rotary Button to enable the alarm or to disable the alarm.
-- If the Joystick Button is pressed, the alarm time can be set. In this mode line 1 shows the alarm time instead of the current system time using the format HH:MM. 
+- In this normal operation mode the time is shown in the format **HH:MM:SS**. In this state, the user can press the Rotary Button to enable the alarm or to disable the alarm.
+- If the Joystick Button is pressed, the alarm time can be set. In this mode line 1 shows the alarm time instead of the current system time using the format **HH:MM**. 
 - If the alarm is enabled and the actual time matches the alarm time, the red LED shall toggle with 4 Hz. 
 -  he alarm shall stop, if any button is pressed or 5 seconds have passed. 
 - The alarm must only be triggered if the clock is in its normal operating mode, i.e., it must not be triggered while the alarm time is being modified.
