@@ -15,9 +15,12 @@
 
 **In addition, the LEDs are used for the following functionality:**
 
-- The green LED blinks synchronously with the counter of the seconds. 
-- The yellow LED is on, if and only if the alarm is enabled.
-- The red LED is flashing with 4Hz during alarm, and it is off otherwise.
+- The **green LED** blinks synchronously with the counter of the seconds. 
+- The **yellow LED** is on, if and only if the alarm is enabled.
+- The **red LED** is flashing with 4Hz during alarm, and it is off otherwise.
+
+
+
 
 #### Alarm Clock Implementation:
 
