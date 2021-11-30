@@ -1,6 +1,6 @@
 ## Alarm Clock based on Event-Driven Finite-State Machine Model
 
-Functionality:
+#### Functionality:
 
 - When the microcontroller is powered up, the actual time is not known. 
 - The user has to set the time manually using the buttons.
@@ -13,13 +13,13 @@ Functionality:
 -  he alarm shall stop, if any button is pressed or 5 seconds have passed. 
 - The alarm must only be triggered if the clock is in its normal operating mode, i.e., it must not be triggered while the alarm time is being modified.
 
-In addition, the LEDs are used for the following functionality:
+**In addition, the LEDs are used for the following functionality:**
 
 - The green LED blinks synchronously with the counter of the seconds. 
 - The yellow LED is on, if and only if the alarm is enabled.
 - The red LED is flashing with 4Hz during alarm, and it is off otherwise.
 
-Alarm Clock Implementation:
+#### Alarm Clock Implementation:
 
 The described alarm clock is implemented using finite state machine (FSM) as an exclusively event-based (i.e., not synchronous) one!
 The FSM is implemented with pointers to functions. A state is represented by a pointer to an event handler (i.e., a function), which takes a pointer to the FSM itself and the event that occurred.
@@ -41,12 +41,12 @@ Instead of using multiple hardware timers, a task scheduler is implemented using
 In order to provide a synchronous execution of tasks, the scheduler periodically polls for executable tasks inside the scheduler_run() function.
 The function scheduler_init() initializes the scheduler and Timer2. 
 
-All tasks are represented by a linked list data structure. Each task is described by a function pointer to the function to execute (taskDescriptor.task). 
+All tasks are represented by a **linked list data structure**. Each task is described by a function pointer to the function to execute (taskDescriptor.task). 
 A task is scheduled for execution after a fixed time period given by taskDescriptor.expire. The scheduler also uses this variable to count down the milliseconds until the task should be executed. 
 Tasks can be scheduled for single execution (taskDescriptor.period==0) or periodic execution (taskDescriptor.period>0). 
 “Single execution tasks” are removed after execution; periodic tasks remain in the task list and are repeated depending on their period.
 
-To schedule a task, these parameters have to be set in the task descriptor and call the scheduler_add() function. A pointer is provided to the taskDescriptor as a call parameter. 
+**To schedule a task**, these parameters have to be set in the task descriptor and call the scheduler_add() function. A pointer is provided to the taskDescriptor as a call parameter. 
 Additionally, the function to be executed takes avoid* parameter to enable the passing of parameters to a task (taskDescriptor.param). Added tasks can later be removed from the scheduler with the function scheduler_remove().
 
 Within the scheduler, the scheduled tasks should be organized as a singly linked list, which is initially empty: The scheduler does not reserve memory for the task descriptors. 
@@ -59,7 +59,7 @@ Any interrupt service routine that calls a scheduler function may interleave wit
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Lib: ATmega128RFA1 Microcontroller Configuration and Device drivers 
+## ATmega128RFA1 Microcontroller Configuration and Device drivers - Lib
 
 ### LED driver
 Driver used for using different LEDs is implemented. It contains modular functionality for leds.
@@ -80,14 +80,14 @@ A macro BUTTON_NUM_DEBOUNCE_CHECKS is defined based on “The Art of Designing E
 ### ADC driver 
 Driver is implemented to convert analog input voltages to digital values.
 On the board, the following peripherals are connected to the ADC:
-- A temperature sensor at pin 2 of port F.
-- A light sensor at pin 4 of port F.
-- The joystick at pin 5 of port F.
-- A microphone is connected differential to the pins 0 and 1 of port F 
+- A **temperature sensor** at pin 2 of port F.
+- A **light sensor** at pin 4 of port F.
+- A **joystick** at pin 5 of port F.
+- A **microphone** is connected differential to the pins 0 and 1 of port F 
 
 All components output an analog voltage between 0 V and 1.6 V. 
 
 ### Hardware Timer Driver
-Instead of busy-waiting with the _delay_ms function, the timing is done without blocking other operations. 
+Instead of busy-waiting with the **_delay_ms** function, the timing is done without blocking other operations. 
 The 8-bit Timer/Counter2 is used to invoke callback asynchronous operations with different modes (Compare match, PWM).
 
