@@ -20,7 +20,7 @@
 - The **red LED** is flashing with 4Hz during alarm, and it is off otherwise.
 
 
-
+https://github.com/Hussien-Saleh/Alarm-Clock/blob/master/fsm.png
 
 #### Alarm Clock Implementation:
 
