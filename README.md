@@ -19,9 +19,8 @@
 - The **yellow LED** is on, if and only if the alarm is enabled.
 - The **red LED** is flashing with 4Hz during alarm, and it is off otherwise.
 
-![alt text](https://github.com/Hussien-Saleh/Alarm-Clock/blob/master/fsm.png )
+![alt text](https://github.com/Hussien-Saleh/Alarm-Clock/blob/master/fsm.png)
 
-<a href="url"><img src="https://github.com/Hussien-Saleh/Alarm-Clock/blob/master/fsm.png " align="center" height="750" width="1000" ></a>
 
 #### Alarm Clock Implementation:
 
