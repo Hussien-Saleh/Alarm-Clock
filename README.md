@@ -21,6 +21,7 @@
 
 ![alt text](https://github.com/Hussien-Saleh/Alarm-Clock/blob/master/fsm.png)
 
+<img src="hhttps://github.com/Hussien-Saleh/Alarm-Clock/blob/master/fsm.png" width="100" height="100">
 
 #### Alarm Clock Implementation:
 
