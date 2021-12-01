@@ -10,7 +10,7 @@
 - In this normal operation mode the time is shown in the format **HH:MM:SS**. In this state, the user can press the Rotary Button to enable the alarm or to disable the alarm.
 - If the Joystick Button is pressed, the alarm time can be set. In this mode line 1 shows the alarm time instead of the current system time using the format **HH:MM**. 
 - If the alarm is enabled and the actual time matches the alarm time, the red LED shall toggle with 4 Hz. 
--  he alarm shall stop, if any button is pressed or 5 seconds have passed. 
+- The alarm shall stop, if any button is pressed or 5 seconds have passed. 
 - The alarm must only be triggered if the clock is in its normal operating mode, i.e., it must not be triggered while the alarm time is being modified.
 
 **In addition, the LEDs are used for the following functionality:**
